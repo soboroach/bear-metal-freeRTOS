@@ -1,0 +1,116 @@
+
+Discarded input sections
+
+ .group         0x00000000        0xc /tmp/ccRkqjjb.o
+ .text          0x00000000        0x0 /tmp/ccRkqjjb.o
+ .data          0x00000000        0x0 /tmp/ccRkqjjb.o
+ .bss           0x00000000        0x0 /tmp/ccRkqjjb.o
+ .text.startup.main
+                0x00000000        0x4 /tmp/ccRkqjjb.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x08000000         0x00200000         xr
+sram             0x20000000         0x00030000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccRkqjjb.o
+LOAD /opt/st/stm32cubeclt_1.20.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a
+LOAD /opt/st/stm32cubeclt_1.20.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/libgcc.a
+                0x20030000                        _estack = (ORIGIN (sram) + LENGTH (sram))
+
+.vectors        0x08000000      0x1c4
+ *(.vectors)
+ .vectors       0x08000000      0x1c4 /tmp/ccRkqjjb.o
+                0x08000000                tab
+
+.text           0x080001c4       0x3c
+ *(.text*)
+ .text._reset   0x080001c4       0x3c /tmp/ccRkqjjb.o
+                0x080001c4                _reset
+
+.glue_7         0x08000200        0x0
+ .glue_7        0x08000200        0x0 linker stubs
+
+.glue_7t        0x08000200        0x0
+ .glue_7t       0x08000200        0x0 linker stubs
+
+.vfp11_veneer   0x08000200        0x0
+ .vfp11_veneer  0x08000200        0x0 linker stubs
+
+.v4_bx          0x08000200        0x0
+ .v4_bx         0x08000200        0x0 linker stubs
+
+.iplt           0x08000200        0x0
+ .iplt          0x08000200        0x0 /tmp/ccRkqjjb.o
+
+.rel.dyn        0x08000200        0x0
+ .rel.iplt      0x08000200        0x0 /tmp/ccRkqjjb.o
+
+.rodata
+ *(.rodata*)
+
+.data           0x20000000        0x0 load address 0x08000200
+                0x20000000                        _sdata = .
+ *(.first_data)
+ *(.data SORT_BY_NAME(.data.*))
+                0x20000000                        _edata = .
+                0x08000200                        _sidata = LOADADDR (.data)
+
+.igot.plt       0x20000000        0x0 load address 0x08000200
+ .igot.plt      0x20000000        0x0 /tmp/ccRkqjjb.o
+
+.bss            0x20000000        0x0 load address 0x08000200
+                0x20000000                        _sbss = .
+ *(.bss SORT_BY_NAME(.bss.*) COMMON)
+                0x20000000                        _ebss = .
+                0x20000000                        . = ALIGN (0x8)
+                0x20000000                        _end = .
+OUTPUT(firmware.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000      0x12b
+ .debug_info    0x00000000      0x12b /tmp/ccRkqjjb.o
+
+.debug_abbrev   0x00000000       0xf9
+ .debug_abbrev  0x00000000       0xf9 /tmp/ccRkqjjb.o
+
+.debug_loclists
+                0x00000000       0x78
+ .debug_loclists
+                0x00000000       0x78 /tmp/ccRkqjjb.o
+
+.debug_aranges  0x00000000       0x28
+ .debug_aranges
+                0x00000000       0x28 /tmp/ccRkqjjb.o
+
+.debug_rnglists
+                0x00000000       0x31
+ .debug_rnglists
+                0x00000000       0x31 /tmp/ccRkqjjb.o
+
+.debug_macro    0x00000000      0xadd
+ .debug_macro   0x00000000       0x11 /tmp/ccRkqjjb.o
+ .debug_macro   0x00000011      0xacc /tmp/ccRkqjjb.o
+
+.debug_line     0x00000000       0xa7
+ .debug_line    0x00000000       0xa7 /tmp/ccRkqjjb.o
+
+.debug_str      0x00000000     0x2e55
+ .debug_str     0x00000000     0x2e55 /tmp/ccRkqjjb.o
+                               0x2e6b (size before relaxing)
+
+.comment        0x00000000       0x43
+ .comment       0x00000000       0x43 /tmp/ccRkqjjb.o
+                                 0x44 (size before relaxing)
+
+.ARM.attributes
+                0x00000000       0x34
+ .ARM.attributes
+                0x00000000       0x34 /tmp/ccRkqjjb.o
+
+.debug_frame    0x00000000       0x30
+ .debug_frame   0x00000000       0x30 /tmp/ccRkqjjb.o

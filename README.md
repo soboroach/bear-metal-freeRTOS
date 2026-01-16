@@ -1,1 +1,0 @@
-# bear-metal-freeRTOS
